@@ -1,190 +1,164 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#292238">
+  <meta name="theme-color" content="#D296A2">
   <title>The Magical Cupboard</title>
+
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --pink: #D296A2;
+      --cream: #E8E2D8;
+      --slate: #70768D;
+      --black: #000000;
+      --white: #FFFFFF;
+      --red: #E53935;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Spectral', Georgia, serif;
+      font-weight: 400;
+      background: var(--cream);
+      color: var(--black);
+      text-align: center;
+    }
+
+    header {
+      padding: 28px 16px;
+      background: var(--pink);
+      color: var(--black);
+    }
+
+    header strong {
+      font-size: 1.35rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 45px 22px;
+    }
+
+    .logo-placeholder {
+      margin: 0 auto 30px;
+      max-width: 360px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+    }
+
+    .logo-placeholder img {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      display: block;
+      margin: auto;
+      border: none;
+    }
+
+    .tagline {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--slate);
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: 24px auto;
+      line-height: 1.9;
+      font-size: 1.08rem;
+    }
+
+    .contact {
+      margin-top: 40px;
+      padding: 28px 22px;
+      border-radius: 18px;
+      background: var(--pink);
+      color: var(--black);
+    }
+
+    .contact a {
+      color: var(--black);
+      font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+
     footer {
-    padding: 24px 16px;
-    background: var(--pink);
-    color: var(--black);
-    font-size: 0.95rem;
-  }
-
-  footer p {
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 600px) {
-    main {
-      padding: 30px 18px;
+      padding: 24px 16px;
+      background: var(--pink);
+      color: var(--black);
+      font-size: 0.95rem;
     }
 
-    .logo-placeholder {
-      max-width: 100%;
-    }
-  }
-</style>
-  @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&display=swap');
-
-  * {
-    box-sizing: border-box;
-  }
-
-  :root {
-    --pink: #D296A2;
-    --cream: #E8E2D8;
-    --slate: #70768D;
-    --black: #000000;
-    --white: #FFFFFF;
-    --red: #E53935;
-  }
-
-  body {
-    margin: 0;
-    font-family: 'Spectral', Georgia, serif;
-    font-weight: 400;
-    background: var(--cream);
-    color: var(--black);
-    text-align: center;
-  }
-
-  header {
-    padding: 28px 16px;
-    background: var(--slate);
-    color: var(--white);
-  }
-
-  header strong {
-    font-size: 1.35rem;
-    letter-spacing: 2px;
-  }
-
-  header p {
-    margin: 8px 0 0;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
-  }
-
-  main {
-    max-width: 800px;
-    margin: auto;
-    padding: 45px 22px;
-  }
-
-  h1 {
-    font-size: clamp(2.2rem, 6vw, 3.8rem);
-    line-height: 1.15;
-    font-weight: 500;
-    margin: 10px 0 20px;
-  }
-
-  h2 {
-    font-weight: 600;
-  }
-
-  .logo-placeholder {
-    margin: 0 auto 30px;
-    max-width: 360px;
-    min-height: 180px;
-    background: var(--white);
-    border: 2px solid var(--pink);
-    border-radius: 18px;
-    display: grid;
-    place-content: center;
-    padding: 20px;
-  }
-
-  .tagline {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--slate);
-  }
-
-  .intro {
-    max-width: 650px;
-    margin: 24px auto;
-    line-height: 1.9;
-    font-size: 1.08rem;
-  }
-
-  .contact {
-    margin-top: 40px;
-    padding: 28px 22px;
-    border-radius: 18px;
-    background: var(--pink);
-    color: var(--black);
-  }
-
-  .contact a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 12px 24px;
-    background: var(--red);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-  }
-
-  .contact a:hover {
-    opacity: 0.85;
-  }
-
-  a {
-    color: var(--black);
-  }
-
-  footer {
-    padding: 24px 16px;
-    background: var(--slate);
-    color: var(--white);
-    font-size: 0.95rem;
-  }
-
-  footer p {
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 600px) {
-    main {
-      padding: 30px 18px;
+    footer p {
+      margin-bottom: 0;
     }
 
-    .logo-placeholder {
-      max-width: 100%;
+    @media (max-width: 600px) {
+      main {
+        padding: 30px 18px;
+      }
+
+      .logo-placeholder {
+        max-width: 100%;
+      }
     }
-  }
-</style>
+  </style>
+</head>
 
-    
-<main>
-  <div class="logo-placeholder">
-    <img
-      src="b4frix.gif"
-      alt="The Magical Cupboard animated logo"
-    >
-  </div>
+<body>
+  <header>
+    <strong>THE MAGICAL CUPBOARD</strong>
+    <p>IMAGINATION HAS NO WASTE</p>
+  </header>
 
-  <p class="tagline">Share More. Create More. Waste Less.</p>
+  <main>
+    <div class="logo-placeholder">
+      <img
+        src="b4frix.gif"
+        alt="The Magical Cupboard animated logo"
+      >
+    </div>
 
-  <p class="intro">
-    The Magical Cupboard is a creative reuse project in development
-    in Camden, London. We want to give pre-loved toys and creative
-    materials another life, inspire children to learn through making,
-    and bring our community together.
-  </p>
+    <p class="tagline">Share More. Create More. Waste Less.</p>
 
-  <section class="contact">
-    <h2>Get in touch</h2>
-    <p>For more information, contact</p>
-    <p>
-      <a href="mailto:themagicalcupboard.hq@gmail.com">
-        themagicalcupboard.hq@gmail.com
-      </a>
+    <p class="intro">
+      The Magical Cupboard is a creative reuse project in development
+      in Camden, London. We want to give pre-loved toys and creative
+      materials another life, inspire children to learn through making,
+      and bring our community together.
     </p>
-  </section>
-</main>
+
+    <section class="contact">
+      <h2>Get in touch</h2>
+      <p>For more information, contact</p>
+      <p>
+        <a href="mailto:themagicalcupboard.hq@gmail.com">
+          themagicalcupboard.hq@gmail.com
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    The Magical Cupboard · Camden, London
+    <p>A project in development</p>
+  </footer>
+</body>
+</html>
